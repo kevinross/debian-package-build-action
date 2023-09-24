@@ -251,7 +251,8 @@ async function main() {
                 "exec",
                 container,
                 "ls",
-                "-al ."
+                "-al",
+                "."
             ])
             await exec.exec("docker", [
                 "exec",
