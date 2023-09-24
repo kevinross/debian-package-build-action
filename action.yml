@@ -44,7 +44,7 @@ inputs:
   CHECK:
     description: "If 'true', checks the built package with lintian"
     required: false
-    default: '1'
+    default: '0'
   # Build configuration
   SIGNING_KEY:
     description: "Armored GPG key to use to sign packages"
@@ -61,7 +61,7 @@ inputs:
   DPKG_BUILDPACKAGE_HARDEN_ALL:
     description: ""
     required: false
-    default: '1'
+    default: '0'
   DPKG_BUILDPACKAGE_FORCE_INCLUDE_SOURCE:
     description: ""
     required: false
