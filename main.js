@@ -250,6 +250,13 @@ async function main() {
             await exec.exec("docker", [
                 "exec",
                 container,
+                "chmod",
+                "a+x",
+                "/build-deb"
+            ])
+            await exec.exec("docker", [
+                "exec",
+                container,
                 "/build-deb"
             ])
             core.endGroup()
