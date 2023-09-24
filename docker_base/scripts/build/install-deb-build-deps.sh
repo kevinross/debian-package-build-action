@@ -15,10 +15,10 @@ debug_echo() {
 
 debug_echo "[install-build-dep] Updating package list..."
 if [[ "${DEBUG}" -eq 1 ]]; then
-  sudo apt-get update
+ apt-get update
 else
-  sudo apt-get update &>/dev/null
+ apt-get update &>/dev/null
 fi
 
 debug_echo "[install-build-dep] Installing build dependencies..."
-sudo apt-get build-dep -y /src | tee "${BUILD_DEP_INSTALL_LOG_FILE}"
+apt-get build-dep -y /src | tee "${BUILD_DEP_INSTALL_LOG_FILE}"
