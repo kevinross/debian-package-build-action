@@ -268,26 +268,6 @@ async function main() {
             ])
             core.endGroup()
         }
-
-        if (CHECK) {
-            core.startGroup("Checking packages")
-            await exec.exec("docker", [
-                "exec",
-                container,
-                "/check-deb"
-            ])
-            core.endGroup()
-        }
-
-        if (SIGNING_KEY) {
-            core.startGroup("Signing packages")
-            await exec.exec("docker", [
-                "exec",
-                container,
-                "/sign-deb"
-            ])
-            core.endGroup()
-        }
     } catch (error) {
         core.setFailed(error.message)
     }
