@@ -252,12 +252,12 @@ async function main() {
                 container,
                 "chmod",
                 "a+x",
-                "/build-deb"
+                "./build-deb"
             ])
             await exec.exec("docker", [
                 "exec",
                 container,
-                "/build-deb"
+                "./build-deb"
             ])
             core.endGroup()
         }
