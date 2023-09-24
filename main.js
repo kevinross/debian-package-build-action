@@ -186,14 +186,13 @@ async function main() {
             await exec.exec("docker", [
                 "exec",
                 container,
-                "sudo",
                 "apt-get",
                 "update",
             ])
             await exec.exec("docker", [
                 "exec",
                 container,
-                "sudo", "apt-get", "upgrade","-y",
+                "apt-get", "upgrade","-y",
             ])
 
             let backportsListStdout = "";
@@ -218,7 +217,6 @@ async function main() {
             await exec.exec("docker", [
                 "exec",
                 container,
-                "sudo",
                 "apt-get",
                 "-y",
                 "install",
@@ -239,7 +237,6 @@ async function main() {
             await exec.exec("docker", [
                 "exec",
                 container,
-                "sudo",
                 "apt-get",
                 "build-dep",
                 "-y",
