@@ -250,6 +250,12 @@ async function main() {
             await exec.exec("docker", [
                 "exec",
                 container,
+                "ls",
+                "-al ."
+            ])
+            await exec.exec("docker", [
+                "exec",
+                container,
                 "chmod",
                 "a+x",
                 "./build-deb"
